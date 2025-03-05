@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "polymerstuff",
+  "version": "${version}",
+  "name": "PolymerStuff",
+  "description": "Stuff but with polymers",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/polymerstuff/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "com.kryeit.polymerstuff.PolymerStuff"
+    ],
+    "fabric-datagen": [
+      "com.kryeit.polymerstuff.datagen.DataGenInit"
+    ]
+  },
+  "mixins": [
+    "polymerstuff.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
