@@ -9,9 +9,9 @@ public class ModSoundEvents {
     public static final SoundEvent MURI_2 = of("music.disc.muri_2");
     public static final SoundEvent MURI_3 = of("music.disc.muri_3");
 
-//    public static final SoundEvent RATS_1 = of("music.disc.rats_1");
-//    public static final SoundEvent RATS_2 = of("music.disc.rats_2");
-//    public static final SoundEvent RATS_3 = of("music.disc.rats_3");
+    public static final SoundEvent RATS_1 = of("music.disc.rats_1");
+    public static final SoundEvent RATS_2 = of("music.disc.rats_2");
+    public static final SoundEvent RATS_3 = of("music.disc.rats_3");
 //
 //    public static final SoundEvent RHINO_1 = of("music.disc.rhino_1");
 //    public static final SoundEvent RHINO_2 = of("music.disc.rhino_2");

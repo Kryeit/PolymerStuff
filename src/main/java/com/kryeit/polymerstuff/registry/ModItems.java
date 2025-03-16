@@ -21,9 +21,9 @@ public class ModItems {
     public static final Item DISC_MURI_2 = register("disc_muri_2", new ModeledItem(new Item.Settings()));
     public static final Item DISC_MURI_3 = register("disc_muri_3", new ModeledItem(new Item.Settings()));
 
-//    public static final Item DISC_RATS_1 = register("disc_rats_1", new ModeledItem(new Item.Settings()));
-//    public static final Item DISC_RATS_2 = register("disc_rats_2", new ModeledItem(new Item.Settings()));
-//    public static final Item DISC_RATS_3 = register("disc_rats_3", new ModeledItem(new Item.Settings()));
+    public static final Item DISC_RATS_1 = register("disc_rats_1", new ModeledItem(new Item.Settings()));
+    public static final Item DISC_RATS_2 = register("disc_rats_2", new ModeledItem(new Item.Settings()));
+    public static final Item DISC_RATS_3 = register("disc_rats_3", new ModeledItem(new Item.Settings()));
 //
 //    public static final Item DISC_RHINO_1 = register("disc_rhino_1", new ModeledItem(new Item.Settings()));
 //    public static final Item DISC_RHINO_2 = register("disc_rhino_2", new ModeledItem(new Item.Settings()));
@@ -44,7 +44,10 @@ public class ModItems {
     }
 
     public static boolean isPolymerDisc(Item item) {
-        return item == DISC_MURI_1 || item == DISC_MURI_2 || item == DISC_MURI_3;
+        boolean isMuri = item == DISC_MURI_1 || item == DISC_MURI_2 || item == DISC_MURI_3;
+        boolean isRats = item == DISC_RATS_1 || item == DISC_RATS_2 || item == DISC_RATS_3;
+
+        return isMuri || isRats;
     }
 
     public static Song fromDisc(Item item) {
@@ -54,6 +57,12 @@ public class ModItems {
             return Song.MURI_2;
         } else if (item == DISC_MURI_3) {
             return Song.MURI_3;
+        } else if (item == DISC_RATS_1) {
+            return Song.RATS_1;
+        } else if (item == DISC_RATS_2) {
+            return Song.RATS_2;
+        } else if (item == DISC_RATS_3) {
+            return Song.RATS_3;
         } else {
             return null;
         }

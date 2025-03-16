@@ -2,25 +2,55 @@
   "music.disc.muri_1": {
     "sounds": [
       {
-        "name": "songs/muri_1",
+        "name": "polymerstuff:songs/muri_1",
         "stream": true
       }
-    ]
+    ],
+    "category": "records"
   },
   "music.disc.muri_2": {
     "sounds": [
       {
-        "name": "songs/muri_2",
+        "name": "polymerstuff:songs/muri_2",
         "stream": true
       }
-    ]
+    ],
+    "category": "records"
   },
   "music.disc.muri_3": {
     "sounds": [
       {
-        "name": "songs/muri_3",
+        "name": "polymerstuff:songs/muri_3",
         "stream": true
       }
-    ]
+    ],
+    "category": "records"
+  },
+  "music.disc.rats_1": {
+    "sounds": [
+      {
+        "name": "polymerstuff:songs/rats_1",
+        "stream": true
+      }
+    ],
+    "category": "records"
+  },
+  "music.disc.rats_2": {
+    "sounds": [
+      {
+        "name": "polymerstuff:songs/rats_2",
+        "stream": true
+      }
+    ],
+    "category": "records"
+  },
+  "music.disc.rats_3": {
+    "sounds": [
+      {
+        "name": "polymerstuff:songs/rats_3",
+        "stream": true
+      }
+    ],
+    "category": "records"
   }
 }

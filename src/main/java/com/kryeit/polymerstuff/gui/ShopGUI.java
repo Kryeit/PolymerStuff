@@ -34,12 +34,12 @@ public class ShopGUI extends SimpleGui {
             ModItems.DISC_RATS_1,
             ModItems.DISC_RATS_2,
             ModItems.DISC_RATS_3,
-            ModItems.DISC_RHINO_1,
-            ModItems.DISC_RHINO_2,
-            ModItems.DISC_RHINO_3,
-            ModItems.DISC_TESS_1,
-            ModItems.DISC_TESS_2,
-            ModItems.DISC_TESS_3
+//            ModItems.DISC_RHINO_1,
+//            ModItems.DISC_RHINO_2,
+//            ModItems.DISC_RHINO_3,
+//            ModItems.DISC_TESS_1,
+//            ModItems.DISC_TESS_2,
+//            ModItems.DISC_TESS_3
     };
 
     public ShopGUI(ServerPlayerEntity player) {
@@ -78,7 +78,7 @@ public class ShopGUI extends SimpleGui {
         discLoreList.add(NbtString.of(Text.Serializer.toJson(Text.literal("Get your favorite music discs!").formatted(Formatting.LIGHT_PURPLE))));
 
         discs.getOrCreateSubNbt("display").put("Lore", discLoreList);
-        this.setSlot(22, discs);
+        this.setSlot(13, discs);
 
         this.open();
     }
