@@ -2,11 +2,14 @@ package com.kryeit.polymerstuff.gui;
 
 import com.kryeit.polymerstuff.MinecraftServerSupplier;
 import com.kryeit.polymerstuff.Utils;
+import com.kryeit.polymerstuff.registry.ModItems;
 import com.kryeit.polymerstuff.ui.GuiTextures;
 import eu.pb4.sgui.api.ClickType;
 import eu.pb4.sgui.api.elements.GuiElementInterface;
 import eu.pb4.sgui.api.gui.SimpleGui;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtList;
 import net.minecraft.nbt.NbtString;
 import net.minecraft.screen.ScreenHandlerType;
@@ -22,6 +25,22 @@ public class ShopGUI extends SimpleGui {
 
     private static final ItemStack COPYCAT_STEP = Utils.getItemStack("create", "copycat_step");
     private static final ItemStack STAFF_HEAD = Utils.getItemStack("minecraft", "player_head");
+    private static final Random RANDOM = new Random();
+
+    private static final Item[] CUSTOM_DISCS = new Item[] {
+            ModItems.DISC_MURI_1,
+            ModItems.DISC_MURI_2,
+            ModItems.DISC_MURI_3,
+            ModItems.DISC_RATS_1,
+            ModItems.DISC_RATS_2,
+            ModItems.DISC_RATS_3,
+            ModItems.DISC_RHINO_1,
+            ModItems.DISC_RHINO_2,
+            ModItems.DISC_RHINO_3,
+            ModItems.DISC_TESS_1,
+            ModItems.DISC_TESS_2,
+            ModItems.DISC_TESS_3
+    };
 
     public ShopGUI(ServerPlayerEntity player) {
         super(ScreenHandlerType.GENERIC_9X6, player, false);
@@ -35,9 +54,6 @@ public class ShopGUI extends SimpleGui {
 
         copycats.getOrCreateSubNbt("display").put("Lore", loreList);
         this.setSlot(20, copycats);
-
-
-        // Discs in the 13
 
         String[] staffNames = {"MuriPlz", "MrRedRhino", "__Tesseract", "RatInATopHat427"};
         String[] onlineStaffNames = MinecraftServerSupplier.getServer().getPlayerManager().getPlayerList().stream()
@@ -54,6 +70,16 @@ public class ShopGUI extends SimpleGui {
                 Text.literal("A place to buy the heads of online players!").formatted(Formatting.LIGHT_PURPLE));
         this.setSlot(24, staff);
 
+        Item randomDiscItem = CUSTOM_DISCS[RANDOM.nextInt(CUSTOM_DISCS.length)];
+        ItemStack discs = new ItemStack(randomDiscItem);
+        discs.setCustomName(Text.literal("Music disc shop").formatted(Formatting.GOLD));
+
+        NbtList discLoreList = new NbtList();
+        discLoreList.add(NbtString.of(Text.Serializer.toJson(Text.literal("Get your favorite music discs!").formatted(Formatting.LIGHT_PURPLE))));
+
+        discs.getOrCreateSubNbt("display").put("Lore", discLoreList);
+        this.setSlot(22, discs);
+
         this.open();
     }
 
@@ -69,7 +95,13 @@ public class ShopGUI extends SimpleGui {
             new PlayersGUI(player);
         }
 
+        for (Item discItem : CUSTOM_DISCS) {
+            if (element.getItemStack().getItem() == discItem) {
+                new DiscsGUI(player);
+                return false;
+            }
+        }
+
         return false;
     }
-
 }

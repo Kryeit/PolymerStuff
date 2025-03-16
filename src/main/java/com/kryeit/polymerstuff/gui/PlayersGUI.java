@@ -24,7 +24,7 @@ public class PlayersGUI extends PaginatedGUI {
     int REQUIRED_COINS = 3;
 
     public PlayersGUI(ServerPlayerEntity player) {
-        super(player, GuiTextures.PLAYER_SHOP.apply(Text.literal("")));
+        super(player, GuiTextures.PLAYER_HEAD_SHOP.apply(Text.literal("")));
         playerHeads = getOnlinePlayerHeadItemStacks();
         populate();
 

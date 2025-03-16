@@ -1,0 +1,26 @@
+{
+  "music.disc.muri_1": {
+    "sounds": [
+      {
+        "name": "songs/muri_1",
+        "stream": true
+      }
+    ]
+  },
+  "music.disc.muri_2": {
+    "sounds": [
+      {
+        "name": "songs/muri_2",
+        "stream": true
+      }
+    ]
+  },
+  "music.disc.muri_3": {
+    "sounds": [
+      {
+        "name": "songs/muri_3",
+        "stream": true
+      }
+    ]
+  }
+}

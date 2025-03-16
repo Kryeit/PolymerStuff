@@ -1,5 +1,6 @@
 package com.kryeit.polymerstuff;
 
+import com.kryeit.polymerstuff.command.Scream;
 import com.kryeit.polymerstuff.command.Shop;
 import com.kryeit.polymerstuff.registry.ModItems;
 import com.kryeit.polymerstuff.ui.GuiTextures;
@@ -38,6 +39,7 @@ public class PolymerStuff implements ModInitializer {
     public void registerCommands() {
         CommandRegistrationCallback.EVENT.register((dispatcher, dedicatedServer, commandFunction) -> {
             Shop.register(dispatcher);
+            Scream.register(dispatcher);
         });
 
     }

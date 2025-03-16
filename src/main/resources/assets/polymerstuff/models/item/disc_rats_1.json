@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "polymerstuff:item/disc_rats_1"
+  }
+}
