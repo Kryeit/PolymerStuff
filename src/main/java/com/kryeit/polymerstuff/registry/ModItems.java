@@ -28,10 +28,14 @@ public class ModItems {
 //    public static final Item DISC_RHINO_1 = register("disc_rhino_1", new ModeledItem(new Item.Settings()));
 //    public static final Item DISC_RHINO_2 = register("disc_rhino_2", new ModeledItem(new Item.Settings()));
 //    public static final Item DISC_RHINO_3 = register("disc_rhino_3", new ModeledItem(new Item.Settings()));
-//
-//    public static final Item DISC_TESS_1 = register("disc_tess_1", new ModeledItem(new Item.Settings()));
-//    public static final Item DISC_TESS_2 = register("disc_tess_2", new ModeledItem(new Item.Settings()));
-//    public static final Item DISC_TESS_3 = register("disc_tess_3", new ModeledItem(new Item.Settings()));
+
+    public static final Item DISC_TESS_1 = register("disc_tess_1", new ModeledItem(new Item.Settings()));
+    public static final Item DISC_TESS_2 = register("disc_tess_2", new ModeledItem(new Item.Settings()));
+    public static final Item DISC_TESS_3 = register("disc_tess_3", new ModeledItem(new Item.Settings()));
+
+    public static final Item DISC_MORONIC_1 = register("disc_moronic_1", new ModeledItem(new Item.Settings()));
+    public static final Item DISC_MORONIC_2 = register("disc_moronic_2", new ModeledItem(new Item.Settings()));
+    public static final Item DISC_MORONIC_3 = register("disc_moronic_3", new ModeledItem(new Item.Settings()));
 
     public static void register() {
         PolymerItemGroupUtils.registerPolymerItemGroup(new Identifier(PolymerStuff.MODID, "group"), ItemGroup.create(ItemGroup.Row.BOTTOM, -1)
@@ -46,8 +50,10 @@ public class ModItems {
     public static boolean isPolymerDisc(Item item) {
         boolean isMuri = item == DISC_MURI_1 || item == DISC_MURI_2 || item == DISC_MURI_3;
         boolean isRats = item == DISC_RATS_1 || item == DISC_RATS_2 || item == DISC_RATS_3;
+        boolean isTess = item == DISC_TESS_1 || item == DISC_TESS_2 || item == DISC_TESS_3;
+        boolean isMoronic = item == DISC_MORONIC_1 || item == DISC_MORONIC_2 || item == DISC_MORONIC_3;
 
-        return isMuri || isRats;
+        return isMuri || isRats || isTess || isMoronic;
     }
 
     public static Song fromDisc(Item item) {
@@ -63,8 +69,20 @@ public class ModItems {
             return Song.RATS_2;
         } else if (item == DISC_RATS_3) {
             return Song.RATS_3;
+        } else if (item == DISC_TESS_1) {
+            return Song.TESS_1;
+        } else if (item == DISC_TESS_2) {
+            return Song.TESS_2;
+        } else if (item == DISC_TESS_3) {
+            return Song.TESS_3;
+        } else if (item == DISC_MORONIC_1) {
+            return Song.MORONIC_1;
+        } else if (item == DISC_MORONIC_2) {
+            return Song.MORONIC_2;
+        } else if (item == DISC_MORONIC_3) {
+            return Song.MORONIC_3;
         } else {
-            return null;
+            return Song.MURI_1;
         }
     }
 

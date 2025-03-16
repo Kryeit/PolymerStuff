@@ -52,5 +52,59 @@
       }
     ],
     "category": "records"
+  },
+  "music.disc.rhino_1": {
+    "sounds": [
+      {
+        "name": "polymerstuff:songs/rhino_1",
+        "stream": true
+      }
+    ],
+    "category": "records"
+  },
+  "music.disc.rhino_2": {
+    "sounds": [
+      {
+        "name": "polymerstuff:songs/rhino_2",
+        "stream": true
+      }
+    ],
+    "category": "records"
+  },
+  "music.disc.rhino_3": {
+    "sounds": [
+      {
+        "name": "polymerstuff:songs/rhino_3",
+        "stream": true
+      }
+    ],
+    "category": "records"
+  },
+  "music.disc.tess_1": {
+    "sounds": [
+      {
+        "name": "polymerstuff:songs/tess_1",
+        "stream": true
+      }
+    ],
+    "category": "records"
+  },
+  "music.disc.tess_2": {
+    "sounds": [
+      {
+        "name": "polymerstuff:songs/tess_2",
+        "stream": true
+      }
+    ],
+    "category": "records"
+  },
+  "music.disc.tess_3": {
+    "sounds": [
+      {
+        "name": "polymerstuff:songs/tess_3",
+        "stream": true
+      }
+    ],
+    "category": "records"
   }
 }

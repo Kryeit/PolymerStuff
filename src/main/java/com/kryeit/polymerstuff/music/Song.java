@@ -22,6 +22,13 @@ public enum Song {
     RATS_2("Will G. Markwith - Starland Intermezzo", "https://www.youtube.com/watch?v=DUoQtAUcn5c"),
     RATS_3("Seymour Brown - Oh, You Beautiful Doll", "https://www.youtube.com/watch?v=roqgbqtvH_s"),
 
+    TESS_1("The Animals - House Of The Rising Sun", "https://youtu.be/N4bFqW_eu2I"),
+    TESS_2("Ray Charles - Hit The Road Jack", "https://youtu.be/uSiHqxgE2d0"),
+    TESS_3("Dvořák： Symphony No. 9 ＂From the New World＂ ⧸ Karajan · Berliner Philharmoniker", "https://youtu.be/P_1N6_O254g"),
+
+    MORONIC_1("The Weeknd - Blinding Lights", " https://youtu.be/fHI8X4OXluQ"),
+    MORONIC_2("Don't Mine At Night - A Minecraft Parody of Katy Perry's Last Friday Night", "https://youtu.be/X_XGxzMrq04"),
+    MORONIC_3("Kyle Dixon & Michael Stein - Teens", "https://youtu.be/Se-3uSaPsaY"),
     ;
 
     private final String name;
@@ -51,6 +58,14 @@ public enum Song {
             case RATS_1 -> ModSoundEvents.RATS_1;
             case RATS_2 -> ModSoundEvents.RATS_2;
             case RATS_3 -> ModSoundEvents.RATS_3;
+
+            case TESS_1 -> ModSoundEvents.TESS_1;
+            case TESS_2 -> ModSoundEvents.TESS_2;
+            case TESS_3 -> ModSoundEvents.TESS_3;
+
+            case MORONIC_1 -> ModSoundEvents.MORONIC_1;
+            case MORONIC_2 -> ModSoundEvents.MORONIC_2;
+            case MORONIC_3 -> ModSoundEvents.MORONIC_3;
         };
     }
 
