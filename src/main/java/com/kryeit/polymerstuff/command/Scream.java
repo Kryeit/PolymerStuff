@@ -45,6 +45,10 @@ public class Scream {
         dispatcher.register(CommandManager.literal("scream")
                 .executes(Scream::execute)
         );
+
+        dispatcher.register(CommandManager.literal("play")
+                .executes(Scream::execute)
+        );
     }
 
 }
