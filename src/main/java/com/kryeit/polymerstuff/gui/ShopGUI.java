@@ -25,7 +25,7 @@ public class ShopGUI extends SimpleGui {
 
     public ShopGUI(ServerPlayerEntity player) {
         super(ScreenHandlerType.GENERIC_9X6, player, false);
-        this.setTitle(GuiTextures.SHOP.apply(Text.literal("Shop")));
+        this.setTitle(GuiTextures.SHOP.apply(Text.literal("")));
 
         ItemStack copycats = COPYCAT_STEP.copy();
         copycats.setCustomName(Text.literal("Copycat shop").formatted(Formatting.GOLD));

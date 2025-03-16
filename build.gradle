@@ -28,10 +28,10 @@ dependencies {
 
     // Patbox stuff https://pb4.eu
     modImplementation include("eu.pb4:sgui:${project.sgui_version}")
-    modImplementation include('eu.pb4:map-canvas-api:0.2.2+1.19.4')
-    modImplementation 'eu.pb4:polymer-core:0.5.9+1.20.1'
-    modImplementation 'eu.pb4:polymer-autohost:0.5.19+1.20.1'
-    modImplementation 'eu.pb4:polymer-resource-pack:0.5.19+1.20.1'
+//    modImplementation include('eu.pb4:map-canvas-api:0.2.2+1.19.4')
+    modImplementation include('eu.pb4:polymer-core:0.5.9+1.20.1')
+    modImplementation include('eu.pb4:polymer-autohost:0.5.19+1.20.1')
+    modImplementation include('eu.pb4:polymer-resource-pack:0.5.19+1.20.1')
 }
 
 processResources {

@@ -7,6 +7,7 @@ import eu.pb4.sgui.api.elements.GuiElementInterface;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
@@ -88,18 +89,30 @@ public class PlayersGUI extends PaginatedGUI {
         }
 
         int itemAmount = 1;
-
         int playerCoins = getPlayerCoinCount();
 
         if (playerCoins >= REQUIRED_COINS) {
             if (hasInventorySpace(clickedItem.getItem(), itemAmount)) {
                 removePlayerCoins(REQUIRED_COINS);
 
-                String playerName = clickedItem.getNbt().getString("SkullOwner");
-                ItemStack itemToGive = GuiUtils.getPlayerHeadItem(playerName, null, null);
-                player.giveItemStack(itemToGive);
+                // Get the display name from the clicked item and extract the player name
+                String displayName = clickedItem.getName().getString();
+                String playerName = displayName.replace("'s head", "");
 
-                player.sendMessage(Text.literal("Successfully purchased " + itemAmount + " " + clickedItem.getName().getString()), false);
+                // Instead of creating a new head from scratch, clone the clicked item
+                // but remove the lore text
+                ItemStack itemToGive = clickedItem.copy();
+
+                // Clear the lore from the display tag
+                if (itemToGive.hasNbt() && itemToGive.getNbt().contains("display")) {
+                    NbtCompound display = itemToGive.getNbt().getCompound("display");
+                    if (display.contains("Lore")) {
+                        display.remove("Lore");
+                    }
+                }
+
+                player.giveItemStack(itemToGive);
+                player.sendMessage(Text.literal("Successfully purchased " + itemAmount + " " + displayName), false);
             } else {
                 player.sendMessage(Text.literal("Your inventory is full. Clear some space before making a purchase."), false);
             }
