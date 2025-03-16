@@ -1,7 +1,6 @@
 package com.kryeit.polymerstuff.gui;
 
 import com.kryeit.polymerstuff.MinecraftServerSupplier;
-import com.kryeit.polymerstuff.ui.GuiTextures;
 import eu.pb4.sgui.api.ClickType;
 import eu.pb4.sgui.api.elements.GuiElementInterface;
 import eu.pb4.sgui.api.gui.SimpleGui;
@@ -20,9 +19,9 @@ public abstract class PaginatedGUI extends SimpleGui {
 
     public int page = 0;
 
-    public PaginatedGUI(ServerPlayerEntity player, String title) {
+    public PaginatedGUI(ServerPlayerEntity player, Text title) {
         super(ScreenHandlerType.GENERIC_9X6, player, false);
-        this.setTitle(GuiTextures.PAGINATED_SHOP.apply(Text.literal(title)));
+        this.setTitle(title);
 
         addPreviousPageButton();
         addNextPageButton();

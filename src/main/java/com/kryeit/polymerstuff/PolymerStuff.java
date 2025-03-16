@@ -7,10 +7,7 @@ import com.kryeit.polymerstuff.ui.UiResourceCreator;
 import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.loader.api.FabricLoader;
-
-import java.util.UUID;
 
 public class PolymerStuff implements ModInitializer {
 

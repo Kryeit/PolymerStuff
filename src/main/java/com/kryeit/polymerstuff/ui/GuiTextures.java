@@ -6,19 +6,17 @@
 
 package com.kryeit.polymerstuff.ui;
 
-import eu.pb4.sgui.api.elements.GuiElementBuilder;
 import net.minecraft.text.Text;
 
 import java.util.function.Function;
-import java.util.function.IntFunction;
-import java.util.function.Supplier;
 
-import static com.kryeit.polymerstuff.ui.UiResourceCreator.*;
+import static com.kryeit.polymerstuff.ui.UiResourceCreator.background;
 
 public class GuiTextures {
 
     public static final Function<Text, Text> SHOP = background("shop");
     public static final Function<Text, Text> PAGINATED_SHOP = background("paginated_shop");
+    public static final Function<Text, Text> PLAYER_SHOP = background("player_shop");
 
     public static void register() {
 

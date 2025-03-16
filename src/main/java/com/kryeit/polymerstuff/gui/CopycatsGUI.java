@@ -1,7 +1,7 @@
 package com.kryeit.polymerstuff.gui;
 
-import com.kryeit.polymerstuff.MinecraftServerSupplier;
 import com.kryeit.polymerstuff.Utils;
+import com.kryeit.polymerstuff.ui.GuiTextures;
 import eu.pb4.sgui.api.ClickType;
 import eu.pb4.sgui.api.elements.GuiElementInterface;
 import net.minecraft.item.Item;
@@ -14,7 +14,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
 import java.util.LinkedHashMap;
-import java.util.List;
 
 public class CopycatsGUI extends PaginatedGUI {
     LinkedHashMap<Item, Integer> items = new LinkedHashMap<>();
@@ -34,29 +33,36 @@ public class CopycatsGUI extends PaginatedGUI {
     private static final ItemStack COPYCAT_COGWHEEL = Utils.getItemStack("copycats", "copycat_cogwheel");
     private static final ItemStack COPYCAT_LARGE_COGWHEEL = Utils.getItemStack("copycats", "copycat_large_cogwheel");
     private static final ItemStack COPYCAT_HEADSTOCK = Utils.getItemStack("railway", "copycat_headstock");
+    private static final ItemStack COPYCAT_CORNER_SLICE = Utils.getItemStack("copycats", "copycat_corner_slice");
+    private static final ItemStack COPYCAT_SLIDING_DOOR = Utils.getItemStack("copycats", "copycat_sliding_door");
+    private static final ItemStack COPYCAT_FOLDING_DOOR = Utils.getItemStack("copycats", "copycat_folding_door");
+
 
     private static final ItemStack IRON_COIN = Utils.getItemStack("createdeco", "iron_coin");
 
     int REQUIRED_COINS = 5;
 
     public CopycatsGUI(ServerPlayerEntity player) {
-        super(player, "Copycats");
+        super(player, GuiTextures.PAGINATED_SHOP.apply(Text.literal("Copycats Shop")));
 
-        items.put(COPYCAT_FENCE.getItem(), 4);
-        items.put(COPYCAT_DOOR.getItem(), 4);
-        items.put(COPYCAT_IRON_DOOR.getItem(), 4);
-        items.put(COPYCAT_TRAPDOOR.getItem(), 5);
-        items.put(COPYCAT_IRON_TRAPDOOR.getItem(), 5);
-        items.put(COPYCAT_WOODEN_BUTTON.getItem(), 8);
-        items.put(COPYCAT_STONE_BUTTON.getItem(), 8);
-        items.put(COPYCAT_WOODEN_PRESSURE_PLATE.getItem(), 6);
-        items.put(COPYCAT_STONE_PRESSURE_PLATE.getItem(), 6);
-        items.put(COPYCAT_LADDER.getItem(), 6);
-        items.put(COPYCAT_FLUID_PIPE.getItem(), 4);
-        items.put(COPYCAT_SHAFT.getItem(), 8);
-        items.put(COPYCAT_COGWHEEL.getItem(), 6);
-        items.put(COPYCAT_LARGE_COGWHEEL.getItem(), 4);
-        items.put(COPYCAT_HEADSTOCK.getItem(), 2);
+        items.put(COPYCAT_FENCE.getItem(), 8);
+        items.put(COPYCAT_DOOR.getItem(), 8);
+        items.put(COPYCAT_IRON_DOOR.getItem(), 8);
+        items.put(COPYCAT_TRAPDOOR.getItem(), 10);
+        items.put(COPYCAT_IRON_TRAPDOOR.getItem(), 10);
+        items.put(COPYCAT_WOODEN_BUTTON.getItem(), 16);
+        items.put(COPYCAT_STONE_BUTTON.getItem(), 16);
+        items.put(COPYCAT_WOODEN_PRESSURE_PLATE.getItem(), 12);
+        items.put(COPYCAT_STONE_PRESSURE_PLATE.getItem(), 12);
+        items.put(COPYCAT_LADDER.getItem(), 12);
+        items.put(COPYCAT_FLUID_PIPE.getItem(), 20);
+        items.put(COPYCAT_SHAFT.getItem(), 16);
+        items.put(COPYCAT_COGWHEEL.getItem(), 24);
+        items.put(COPYCAT_LARGE_COGWHEEL.getItem(), 28);
+        items.put(COPYCAT_HEADSTOCK.getItem(), 32);
+        items.put(COPYCAT_CORNER_SLICE.getItem(), 8);
+        items.put(COPYCAT_SLIDING_DOOR.getItem(), 16);
+        items.put(COPYCAT_FOLDING_DOOR.getItem(), 16);
 
         populate();
         this.open();

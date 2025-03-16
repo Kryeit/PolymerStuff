@@ -2,11 +2,11 @@ package com.kryeit.polymerstuff.gui;
 
 import com.kryeit.polymerstuff.MinecraftServerSupplier;
 import com.kryeit.polymerstuff.Utils;
+import com.kryeit.polymerstuff.ui.GuiTextures;
 import eu.pb4.sgui.api.ClickType;
 import eu.pb4.sgui.api.elements.GuiElementInterface;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -24,7 +24,7 @@ public class PlayersGUI extends PaginatedGUI {
     int REQUIRED_COINS = 3;
 
     public PlayersGUI(ServerPlayerEntity player) {
-        super(player, "Online Player Heads");
+        super(player, GuiTextures.PLAYER_SHOP.apply(Text.literal("")));
         playerHeads = getOnlinePlayerHeadItemStacks();
         populate();
 

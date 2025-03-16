@@ -59,7 +59,6 @@ public class ShopGUI extends SimpleGui {
 
     @Override
     public boolean onClick(int index, ClickType type, SlotActionType action, GuiElementInterface element) {
-
         if (element == null) return false;
 
         if (element.getItemStack().getItem() == COPYCAT_STEP.getItem()) {
