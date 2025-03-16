@@ -59,7 +59,7 @@ public class CopycatsGUI extends PaginatedGUI {
         items.put(COPYCAT_SHAFT.getItem(), 8);
         items.put(COPYCAT_COGWHEEL.getItem(), 6);
         items.put(COPYCAT_LARGE_COGWHEEL.getItem(), 4);
-        items.put(COPYCAT_HEADSTOCK.getItem(), 2);
+        items.put(COPYCAT_HEADSTOCK.getItem(), 1);
         items.put(COPYCAT_CORNER_SLICE.getItem(), 4);
         items.put(COPYCAT_SLIDING_DOOR.getItem(), 1);
         items.put(COPYCAT_FOLDING_DOOR.getItem(), 1);
