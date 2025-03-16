@@ -32,7 +32,7 @@ public class CopycatsGUI extends PaginatedGUI {
     private static final ItemStack COPYCAT_SHAFT = Utils.getItemStack("copycats", "copycat_shaft");
     private static final ItemStack COPYCAT_COGWHEEL = Utils.getItemStack("copycats", "copycat_cogwheel");
     private static final ItemStack COPYCAT_LARGE_COGWHEEL = Utils.getItemStack("copycats", "copycat_large_cogwheel");
-    private static final ItemStack COPYCAT_HEADSTOCK = Utils.getItemStack("railway", "copycat_headstock");
+    private static final ItemStack COPYCAT_HEADSTOCK = Utils.getItemStack("railways", "copycat_headstock");
     private static final ItemStack COPYCAT_CORNER_SLICE = Utils.getItemStack("copycats", "copycat_corner_slice");
     private static final ItemStack COPYCAT_SLIDING_DOOR = Utils.getItemStack("copycats", "copycat_sliding_door");
     private static final ItemStack COPYCAT_FOLDING_DOOR = Utils.getItemStack("copycats", "copycat_folding_door");
