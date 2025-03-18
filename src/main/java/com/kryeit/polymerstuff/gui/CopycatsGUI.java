@@ -43,7 +43,7 @@ public class CopycatsGUI extends PaginatedGUI {
     int REQUIRED_COINS = 5;
 
     public CopycatsGUI(ServerPlayerEntity player) {
-        super(player, GuiTextures.PAGINATED_SHOP.apply(Text.literal("")));
+        super(player, GuiTextures.COPYCAT_SHOP.apply(Text.literal("")));
 
         items.put(COPYCAT_FENCE.getItem(), 4);
         items.put(COPYCAT_DOOR.getItem(), 4);

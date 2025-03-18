@@ -1,6 +1,5 @@
 package com.kryeit.polymerstuff.gui;
 
-import com.kryeit.polymerstuff.Utils;
 import com.kryeit.polymerstuff.music.Song;
 import com.kryeit.polymerstuff.registry.ModItems;
 import com.kryeit.polymerstuff.ui.GuiTextures;
