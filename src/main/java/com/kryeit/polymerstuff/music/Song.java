@@ -9,6 +9,9 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.math.random.Random;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public enum Song {
 
     MURI_1("Hermeto Pascoal - Música da Lagoa", "https://www.youtube.com/watch?v=lZbfNtDCHdM"),
@@ -74,12 +77,17 @@ public enum Song {
         };
     }
 
-    public void play(ServerPlayerEntity player) {
+    public List<Long> play(ServerPlayerEntity player) {
         MinecraftServer server = player.getServer();
+        List<Long> randomSeeds = new ArrayList<>();
+
         if (server != null) {
             var soundEntry = Registries.SOUND_EVENT.getEntry(getSoundEvent());
 
             for (ServerPlayerEntity serverPlayer : server.getPlayerManager().getPlayerList()) {
+                long seed = random.nextLong();
+                randomSeeds.add(seed);
+
                 serverPlayer.networkHandler.sendPacket(
                         new PlaySoundFromEntityS2CPacket(
                                 soundEntry,
@@ -87,10 +95,12 @@ public enum Song {
                                 player,
                                 4.0f,
                                 1.0f,
-                                random.nextLong()
+                                seed
                         )
                 );
             }
         }
+
+        return randomSeeds;
     }
 }
