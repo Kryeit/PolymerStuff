@@ -23,9 +23,13 @@ public enum Song {
     TESS_2("Ray Charles - Hit The Road Jack", "https://youtu.be/uSiHqxgE2d0"),
     TESS_3("Dvořák： Symphony No. 9 ＂From the New World＂ ⧸ Karajan · Berliner Philharmoniker", "https://youtu.be/P_1N6_O254g"),
 
-    MORONIC_1("The Weeknd - Blinding Lights", " https://youtu.be/fHI8X4OXluQ"),
+    MORONIC_1("The Weeknd - Blinding Lights", "https://youtu.be/fHI8X4OXluQ"),
     MORONIC_2("Don't Mine At Night - A Minecraft Parody of Katy Perry's Last Friday Night", "https://youtu.be/X_XGxzMrq04"),
     MORONIC_3("Kyle Dixon & Michael Stein - Teens", "https://youtu.be/Se-3uSaPsaY"),
+
+    RHINO_1("Esto es pa Mi Gente - Rilabeats", "https://www.youtube.com/watch?v=3rflgRKl9tI"),
+    RHINO_2("Howling - Lupus Nocte", "https://youtu.be/O4Lsah7bEJY"),
+    RHINO_3("Numb - Linkin Park", "https://youtu.be/kXYiU_JCYtU")
     ;
 
     private final String name;
@@ -63,6 +67,10 @@ public enum Song {
             case MORONIC_1 -> ModSoundEvents.MORONIC_1;
             case MORONIC_2 -> ModSoundEvents.MORONIC_2;
             case MORONIC_3 -> ModSoundEvents.MORONIC_3;
+
+            case RHINO_1 -> ModSoundEvents.RHINO_1;
+            case RHINO_2 -> ModSoundEvents.RHINO_2;
+            case RHINO_3 -> ModSoundEvents.RHINO_3;
         };
     }
 

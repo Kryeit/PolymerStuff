@@ -35,16 +35,17 @@ public class DiscsGUI extends PaginatedGUI {
         addDisc(ModItems.DISC_RATS_2, Song.RATS_2);
         addDisc(ModItems.DISC_RATS_3, Song.RATS_3);
 
-//        // Add Rhino discs
-//        addDisc(ModItems.DISC_RHINO_1, "MrRedRhino's Disc 1");
-//        addDisc(ModItems.DISC_RHINO_2, "MrRedRhino's Disc 2");
-//        addDisc(ModItems.DISC_RHINO_3, "MrRedRhino's Disc 3");
-//
+        // Add Rhino discs
+        addDisc(ModItems.DISC_RHINO_1, Song.RHINO_1);
+        addDisc(ModItems.DISC_RHINO_2, Song.RHINO_2);
+        addDisc(ModItems.DISC_RHINO_3, Song.RHINO_3);
+
         // Add Tess discs
         addDisc(ModItems.DISC_TESS_1, Song.TESS_1);
         addDisc(ModItems.DISC_TESS_2, Song.TESS_2);
         addDisc(ModItems.DISC_TESS_3, Song.TESS_3);
 
+        // Add Moronic discs
         addDisc(ModItems.DISC_MORONIC_1, Song.MORONIC_1);
         addDisc(ModItems.DISC_MORONIC_2, Song.MORONIC_2);
         addDisc(ModItems.DISC_MORONIC_3, Song.MORONIC_3);
